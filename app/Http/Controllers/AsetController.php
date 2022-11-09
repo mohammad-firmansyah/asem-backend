@@ -125,6 +125,7 @@ class AsetController extends Controller
         if ($validate->fails()) {
             return response()->json($response);
         }
+
         $aset = Aset::findOrFail($id);
         $aset->aset_name = $request->aset_name;
         $aset->aset_tipe = $request->aset_tipe;
@@ -177,15 +178,6 @@ class AsetController extends Controller
 
         $aset->save();
 
-        $now = date_create()->format('Y-m-d H:i:s');
-        $date2 = new DateTime($now) ;
-        $date = new DateTime($aset->tgl_input);
-
-        
-        dd($now,$date2,$date->diff($date2));
-        // $aset=[
-        //     "umur_ekonomis" =>  
-        // ];
         $response = [
             "status" => "success",
             "code" => 200,
