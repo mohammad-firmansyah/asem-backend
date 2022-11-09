@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AfdellingController;
 use App\Http\Controllers\AsetJenisController;
 use App\Http\Controllers\AsetKodeController;
+use App\Http\Controllers\HakAksesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
