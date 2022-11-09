@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Afdelling;
 use Illuminate\Http\Request;
 
 class AfdellingController extends Controller
@@ -13,7 +14,9 @@ class AfdellingController extends Controller
      */
     public function index()
     {
-        //
+        $afdellings = Afdelling::all();
+        
+        return $afdellings;
     }
 
     /**
@@ -35,7 +38,9 @@ class AfdellingController extends Controller
      */
     public function show($id)
     {
-        //
+        $afdelling = Afdelling::FindOrFail($id);
+
+        return $afdelling;
     }
 
     /**

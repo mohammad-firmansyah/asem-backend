@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('aset', AsetController::class);
+Route::apiResource('afdelling', AfdellingController::class);
 
 
