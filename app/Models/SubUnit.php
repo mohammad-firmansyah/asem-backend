@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class SubUnit extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'sub_unit';
+    protected $table = 'unit';
 }

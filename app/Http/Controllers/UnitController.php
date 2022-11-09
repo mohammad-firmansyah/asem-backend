@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Unit;
+
 class UnitController extends Controller
 {
     /**
@@ -13,7 +15,9 @@ class UnitController extends Controller
      */
     public function index()
     {
-        //
+        $unit = Unit::all();
+
+        return $unit;
     }
 
     /**
@@ -35,7 +39,9 @@ class UnitController extends Controller
      */
     public function show($id)
     {
-        //
+        $unit = Unit::FindOFail($id);
+
+        return $unit;
     }
 
     /**

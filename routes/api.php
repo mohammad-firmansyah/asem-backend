@@ -8,6 +8,9 @@ use App\Http\Controllers\AsetJenisController;
 use App\Http\Controllers\AsetKodeController;
 use App\Http\Controllers\HakAksesController;
 use App\Http\Controllers\StatusPosisiController;
+use App\Http\Controllers\SubUnitController;
+use App\Http\Controllers\UnitController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -30,5 +33,8 @@ Route::apiResource('aset-jenis', AsetJenisController::class);
 Route::apiResource('aset-kode', AsetKodeController::class);
 Route::apiResource('hak-akses', HakAksesController::class);
 Route::apiResource('status-posisi', StatusPosisiController::class);
+Route::apiResource('sub-unit', SubUnitController::class);
+Route::apiResource('unit', UnitController::class);
+Route::apiResource('users', UserController::class);
 
 

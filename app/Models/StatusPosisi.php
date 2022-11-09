@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class StatusPosisi extends Model
 {
     use HasFactory;
+    protected $primaryKey = 'status_posisi_id';
+    protected $table = 'status_posisi';
 }
