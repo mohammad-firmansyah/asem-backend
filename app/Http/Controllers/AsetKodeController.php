@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AsetKode;
 use Illuminate\Http\Request;
 
-class AsetCodeController extends Controller
+class AsetKodeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,9 @@ class AsetCodeController extends Controller
      */
     public function index()
     {
-        //
+        $asetKode = AsetKode::all();
+
+        return $asetKode;
     }
 
     /**
@@ -35,7 +38,9 @@ class AsetCodeController extends Controller
      */
     public function show($id)
     {
-        //
+        $asetKode = AsetKode::find($id);
+
+        return $asetKode;
     }
 
     /**

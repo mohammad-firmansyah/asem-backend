@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HakAkses;
 use Illuminate\Http\Request;
 
 class HakAksesController extends Controller
@@ -13,7 +14,9 @@ class HakAksesController extends Controller
      */
     public function index()
     {
-        //
+        $hakAkses =HakAkses::all();
+
+        return $hakAkses;
     }
 
     /**
@@ -35,7 +38,9 @@ class HakAksesController extends Controller
      */
     public function show($id)
     {
-        //
+        $hakAkses = HakAkses::FindOrFail($id);
+
+        return $hakAkses;
     }
 
     /**
