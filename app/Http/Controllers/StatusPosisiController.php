@@ -16,7 +16,14 @@ class StatusPosisiController extends Controller
     {
         $statusPosisi = StatusPosisi::all();
 
-        return $statusPosisi;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $statusPosisi
+        ];
+
+        return response()->json($response);
     }
 
     /**
@@ -40,7 +47,14 @@ class StatusPosisiController extends Controller
     {
         $statusPosisi = StatusPosisi::FindOrFail($id);
 
-        return $statusPosisi;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $statusPosisi
+        ];
+
+        return response()->json($statusPosisi);
     }
 
     /**

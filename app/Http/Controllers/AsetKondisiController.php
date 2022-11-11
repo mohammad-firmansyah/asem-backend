@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HakAkses;
+use App\Models\AsetKondisi;
 use Illuminate\Http\Request;
 
-class HakAksesController extends Controller
+class AsetKondisiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,16 +14,9 @@ class HakAksesController extends Controller
      */
     public function index()
     {
-        $hakAkses =HakAkses::all();
+        $asetKondisi = AsetKondisi::all();
 
-
-        $response = [
-            "status" => "success",
-            "code" => 200,
-            "data" => $hakAkses
-        ];
-
-        return response()->json($response);
+        return $asetKondisi;
     }
 
     /**
@@ -45,16 +38,9 @@ class HakAksesController extends Controller
      */
     public function show($id)
     {
-        $hakAkses = HakAkses::FindOrFail($id);
+        $asetKondisi = AsetKondisi::FindOrfail($id);
 
-
-        $response = [
-            "status" => "success",
-            "code" => 200,
-            "data" => $hakAkses
-        ];
-
-        return response()->json($response);
+        return $asetKondisi;
     }
 
     /**

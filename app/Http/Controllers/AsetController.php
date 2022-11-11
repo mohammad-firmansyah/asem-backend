@@ -198,5 +198,28 @@ class AsetController extends Controller
         //
     }
 
+    public function approve($id) {
+
+
+        
+    }
+    
+    public function kirimDataAset($id) {
+        $aset = Aset::FindOrFail($id);
+
+        if ($aset->aset_sub_unit == 1 && $aset->status_posisi == 1){
+
+            $aset->status_posisi = 4;
+            $aset->update();
+            return $aset;
+            
+        } else {
+            
+            $aset->status_posisi += 1;
+            $aset->update();
+        }
+
+        return $aset;
+    }
     
 }

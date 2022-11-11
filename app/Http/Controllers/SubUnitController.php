@@ -16,7 +16,14 @@ class SubUnitController extends Controller
     {
         $subUnit = SubUnit::all();
 
-        return $subUnit;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $subUnit
+        ];
+
+        return response()->json($response);
     }
 
     /**
@@ -40,7 +47,14 @@ class SubUnitController extends Controller
     {
         $subUnit = SubUnit::FindOrFail($id);
 
-        return $subUnit;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $subUnit
+        ];
+
+        return response()->json($response);
     }
 
     /**

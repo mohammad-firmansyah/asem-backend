@@ -16,7 +16,14 @@ class AsetKodeController extends Controller
     {
         $asetKode = AsetKode::all();
 
-        return $asetKode;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $asetKode
+        ];
+
+        return response()->json($response);
     }
 
     /**
@@ -40,7 +47,15 @@ class AsetKodeController extends Controller
     {
         $asetKode = AsetKode::find($id);
 
-        return $asetKode;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $asetKode
+        ];
+
+        return response()->json($response);
+
     }
 
     /**

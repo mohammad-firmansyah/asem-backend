@@ -14,9 +14,17 @@ class AfdellingController extends Controller
      */
     public function index()
     {
-        $afdellings = Afdelling::all();
+        $afdelling = Afdelling::all();
+
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $afdelling
+        ];
+
+        return response()->json($response);
         
-        return $afdellings;
     }
 
     /**
@@ -40,7 +48,14 @@ class AfdellingController extends Controller
     {
         $afdelling = Afdelling::FindOrFail($id);
 
-        return $afdelling;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $afdelling
+        ];
+
+        return response()->json($response);
     }
 
     /**

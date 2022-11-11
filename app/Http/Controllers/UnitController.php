@@ -17,7 +17,14 @@ class UnitController extends Controller
     {
         $unit = Unit::all();
 
-        return $unit;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $unit
+        ];
+
+        return response()->json($response);
     }
 
     /**
@@ -41,7 +48,14 @@ class UnitController extends Controller
     {
         $unit = Unit::FindOFail($id);
 
-        return $unit;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $unit
+        ];
+
+        return response()->json($response);
     }
 
     /**

@@ -11,6 +11,8 @@ use App\Http\Controllers\StatusPosisiController;
 use App\Http\Controllers\SubUnitController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AsetTipeController;
+use App\Http\Controllers\AsetKondisiController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -36,5 +38,7 @@ Route::apiResource('status-posisi', StatusPosisiController::class);
 Route::apiResource('sub-unit', SubUnitController::class);
 Route::apiResource('unit', UnitController::class);
 Route::apiResource('users', UserController::class);
+Route::apiResource('aset-tipe', AsetTipeController::class);
+Route::apiResource('aset-kondisi', AsetKondisiController::class);
 
 

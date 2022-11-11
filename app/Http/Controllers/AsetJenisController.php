@@ -15,8 +15,15 @@ class AsetJenisController extends Controller
     public function index()
     {
         $asetJenis = AsetJenis::all();
-        
-        return $asetJenis;
+
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $asetJenis
+        ];
+
+        return response()->json($response);
     }
 
     /**
@@ -40,7 +47,14 @@ class AsetJenisController extends Controller
     {
         $asetJenis = AsetJenis::FindOrFail($id);
 
-        return $asetJenis;
+
+        $response = [
+            "status" => "success",
+            "code" => 200,
+            "data" => $asetJenis
+        ];
+
+        return response()->json($response);
     }
 
     /**
